@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+  	body{
+	font-family: arial;
+	font-size: 18px;
+	background-image: url('https://images.pexels.com/photos/207153/pexels-photo-207153.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+	background-size: cover; 
+}
+section{
+	background-color: #ddd;
+	width: 75%;
+	box-shadow: 0px 0px 10px white;
+}
+  </style>
+</head>
+<body class="justify-content-center">
+	<header class="my-5">
+		<div class="container">
+			<div class="row justify-content-center text-white"><h2>HTTP Status Code<hr class="bg-white"></h2></div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row justify-content-center">
+	<div class="list-group list-group-horizontal-sm" id="list-tab" role="tablist">
+  <a class="list-group-item list-group-item-action active"  id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Overview</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-400-list" data-toggle="list" href="#list-400" role="tab" aria-controls="400">400</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-401-list" data-toggle="list" href="#list-401" role="tab" aria-controls="401">401</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-402-list" data-toggle="list" href="#list-402" role="tab" aria-controls="402">402</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-403-list" data-toggle="list" href="#list-403" role="tab" aria-controls="403">403</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-404-list" data-toggle="list" href="#list-404" role="tab" aria-controls="404">404</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-405-list" data-toggle="list" href="#list-405" role="tab" aria-controls="405">405</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-500-list" data-toggle="list" href="#list-500" role="tab" aria-controls="500">500</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-501-list" data-toggle="list" href="#list-501" role="tab" aria-controls="501">501</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-502-list" data-toggle="list" href="#list-502" role="tab" aria-controls="502">502</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-503-list" data-toggle="list" href="#list-503" role="tab" aria-controls="503">503</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-504-list" data-toggle="list" href="#list-504" role="tab" aria-controls="504">504</a>
+  <a class="list-group-item list-group-item-action bg-transparent text-white"  id="list-505-list" data-toggle="list" href="#list-505" role="tab" aria-controls="505">505</a>
+</div>
+</div>
+	<section class="my-3 mx-auto p-4">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Whenever you visit a web page, your computer will request data from a server through HTTP. Even before the requested page is displayed in your browser, the web server will send the HTTP header that has the status code. The status code provides information about the status of the request. A normal web page gets the status code as 200. But we do not see this as the server proceeds to send the contents of the page. It’s only when there is an error, we see the status code 404 Not Found.</div>
+					<div class="tab-pane fade" id="list-400" role="tabpanel" aria-labelledby="list-400-list">
+						<h2 class="text-center">Bad Request</h2>
+						<blockquote class="text-center">
+							<h6>Syntax of the request not understood by the server.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p>
+						<h4>Status:</h4>
+						<p>400 Bad Request</p>
+						<h4>Title:</h4>
+						<p>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-401" role="tabpanel" aria-labelledby="list-401-list">
+						<h2 class="text-center">Not Authorized</h2>
+						<blockquote class="text-center">
+							<h6>Request requires user authentication</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the request has not been applied because it lacks valid authentication credentials for the target resource.</p>
+						<p>This status is sent with a WWW-Authenticate header that contains information on how to authorize correctly.<q class="text-muted font-italic">This status is similar to 403, but in this case, authentication is possible.</q></p>
+						<h4>Status:</h4>
+						<p>401 Unauthorized</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Authentication</p>
+					</div>
+					<div class="tab-pane fade" id="list-402" role="tabpanel" aria-labelledby="list-402-list">
+						<h2 class="text-center">Payment Required</h2>
+						<blockquote class="text-center">
+							<h6>Reserved for future use.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>is a nonstandard client error status response code that is reserved for future use.</p>
+						<p>Sometimes, this code indicates that the request can not be processed until the client makes a payment. Originally it was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment.<q class="text-muted font-italic">However, no standard use convention exists and different entities use it in different contexts.</q></p>
+						<h4>Status:</h4>
+						<p>402 Payment Required</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-403" role="tabpanel" aria-labelledby="list-403-list">
+						<h2 class="text-center">Forbidden</h2>
+						<blockquote class="text-center">
+							<h6>Server refuses to fulfill the request.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server understood the request but refuses to authorize it.</p>
+						<p>This status is similar to 401, but in this case, re-authenticating will make no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.</p>
+						<h4>Status:</h4>
+						<p>403 Forbidden</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-404" role="tabpanel" aria-labelledby="list-404-list">
+						<h2 class="text-center">Not Found</h2>
+						<blockquote class="text-center">
+							<h6>Document or file requested by the client was not found.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server can't find the requested resource. Links which lead to a 404 page are often called broken or dead links, and can be subject to link rot.</p>
+						<p>A 404 status code does not indicate whether the resource is temporarily or permanently missing. But if a resource is permanently removed, a 410 (Gone) should be used instead of a 404 status.</p>
+						<h4>Status:</h4>
+						<p>404 Not Found</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-405" role="tabpanel" aria-labelledby="list-405-list">
+						<h2 class="text-center">Method Not Allowed</h2>
+						<blockquote class="text-center">
+							<h6>Document or file requested by the client was not found.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the request method is known by the server but is not supported by the target resource.</p>
+						<p>The server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.</p>
+						<h4>Status:</h4>
+						<p>405 Method Not Allowed</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-500" role="tabpanel" aria-labelledby="list-500-list">
+						<h2 class="text-center">Internal Server Error</h2>
+						<blockquote class="text-center">
+							<h6>Request unsuccessful because of an unexpected condition encountered by the server.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+						<p>This error response is a generic "catch-all" response. Usually, this indicates the server cannot find a better 5xx error code to response. Sometimes, server administrators log error responses like the 500 status code with more details about the request to prevent the error from happening again in the future.</p>
+						<h4>Status:</h4>
+						<p>500 Internal Server Error</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-501" role="tabpanel" aria-labelledby="list-501-list">
+						<h2 class="text-center">Not Implemented</h2>
+						<blockquote class="text-center">
+							<h6>Request unsuccessful as the server could not support the functionality needed to fulfill the request.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p> the server does not support the functionality required to fulfill the request.</p>
+						<p>This status can also send a Retry-After header, telling the requester when to check back to see if the functionality is supported by then.501 is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource. The only methods that servers are required to support (and therefore that must not return 501) are GET and HEAD.If the server does recognize the method, but intentionally does not support it, the appropriate response is 405 Method Not Allowed.</p>
+						<h4>Status:</h4>
+						<p>501 Not Implemented</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-502" role="tabpanel" aria-labelledby="list-502-list">
+						<h2 class="text-center">Bad Gateway</h2>
+						<blockquote class="text-center">
+							<h6>Server received an invalid response from the upstream server while trying to fulfill the request.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>tis a nonstandard client error status response code that is reserved for future use.</p>
+						<p>Sometimes, this code indicates that the request can not be processed until the client makes a payment. Originally it was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts.</p>
+						<h4>Status:</h4>
+						<p>402 Payment Required</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-503" role="tabpanel" aria-labelledby="list-503-list">
+						<h2 class="text-center">Service Unavailable</h2>
+						<blockquote class="text-center">
+							<h6>Request unsuccessful to the server being down or overloaded.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server is not ready to handle the request.</p>
+						<p>Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the Retry-After HTTP header should, if possible, contain the estimated time for the recovery of the service.</p>
+						<h4>Status:</h4>
+						<p>503 Service Unavailable</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-504" role="tabpanel" aria-labelledby="list-504-list">
+						<h2 class="text-center">Gateway Timeout</h2>
+						<blockquote class="text-center">
+							<h6>Upstream server failed to send a request in the time allowed by the server.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.</p>
+						<p>Note: A Gateway might refer to different things in networking and a 504 error is usually not something you can fix, but requires a fix by the web server or the proxies you are trying to get access through.</p>
+						<h4>Status:</h4>
+						<p>504 Gateway Timeout</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+					<div class="tab-pane fade" id="list-505" role="tabpanel" aria-labelledby="list-505-list">
+						<h2 class="text-center">HTTP Version Not Supported</h2>
+						<blockquote class="text-center">
+							<h6>Server does not support the HTTP version specified in the request.</h6>
+						</blockquote>
+						<h4>Indicates To:</h4>
+						<p>the HTTP version used in the request is not supported by the server.</p>
+						<p>This error response is a generic "catch-all" response. Usually, this indicates the server cannot find a better 5xx error code to response. Sometimes, server administrators log error responses like the 500 status code with more details about the request to prevent the error from happening again in the future.</p>
+						<h4>Status:</h4>
+						<p>505 HTTP Version Not Supported</p>
+						<h4>Title:</h4>
+						<p>HTTP/1.1: Semantics and Content</p>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
